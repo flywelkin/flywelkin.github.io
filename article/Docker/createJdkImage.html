@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>构建JDK8基础镜像 | 俯瞰星空ミ</title>
+    <meta name="description" content="如果说人生是一场旅行，而我是这场旅行的主人!">
+    <link rel="icon" href="/imgs/logo.png">
+    
+    <link rel="preload" href="/assets/css/0.styles.2ad9d938.css" as="style"><link rel="preload" href="/assets/js/app.3045a64f.js" as="script"><link rel="preload" href="/assets/js/2.82912f8f.js" as="script"><link rel="preload" href="/assets/js/10.12481805.js" as="script"><link rel="prefetch" href="/assets/js/11.518458f8.js"><link rel="prefetch" href="/assets/js/12.47b79696.js"><link rel="prefetch" href="/assets/js/13.21670d87.js"><link rel="prefetch" href="/assets/js/14.758c7b73.js"><link rel="prefetch" href="/assets/js/3.4583f834.js"><link rel="prefetch" href="/assets/js/4.f24c765e.js"><link rel="prefetch" href="/assets/js/5.20ff3f0a.js"><link rel="prefetch" href="/assets/js/6.34504259.js"><link rel="prefetch" href="/assets/js/7.2a7c7fde.js"><link rel="prefetch" href="/assets/js/8.b455e987.js"><link rel="prefetch" href="/assets/js/9.b7f40dee.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.2ad9d938.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">俯瞰星空ミ</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/article/" class="nav-link router-link-active">文章</a></div><div class="nav-item"><a href="/about/index.html" class="nav-link">关于</a></div><div class="nav-item"><a href="https://github.com/yuanjg/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/article/" class="nav-link router-link-active">文章</a></div><div class="nav-item"><a href="/about/index.html" class="nav-link">关于</a></div><div class="nav-item"><a href="https://github.com/yuanjg/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Activiti</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Docker</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/article/Docker/" class="sidebar-link">概要</a></li><li><a href="/article/Docker/createJdkImage.html" class="active sidebar-link">构建JDK8基础镜像</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/article/Docker/createJdkImage.html#下载centos-7-6-1810-基础镜像" class="sidebar-link">下载centos:7.6.1810 基础镜像</a></li><li class="sidebar-sub-header"><a href="/article/Docker/createJdkImage.html#创建文件夹jdk" class="sidebar-link">创建文件夹jdk</a></li><li class="sidebar-sub-header"><a href="/article/Docker/createJdkImage.html#上传jdk到-jdk并解压" class="sidebar-link">上传JDK到/jdk并解压</a></li><li class="sidebar-sub-header"><a href="/article/Docker/createJdkImage.html#删除jdk中多余文件" class="sidebar-link">删除JDK中多余文件</a></li><li class="sidebar-sub-header"><a href="/article/Docker/createJdkImage.html#创建镜像" class="sidebar-link">创建镜像</a></li><li class="sidebar-sub-header"><a href="/article/Docker/createJdkImage.html#创建容器" class="sidebar-link">创建容器</a></li><li class="sidebar-sub-header"><a href="/article/Docker/createJdkImage.html#创建eureak文件夹" class="sidebar-link">创建eureak文件夹</a></li><li class="sidebar-sub-header"><a href="/article/Docker/createJdkImage.html#创建dockerfile" class="sidebar-link">创建Dockerfile</a></li><li class="sidebar-sub-header"><a href="/article/Docker/createJdkImage.html#创建镜像-2" class="sidebar-link">创建镜像</a></li><li class="sidebar-sub-header"><a href="/article/Docker/createJdkImage.html#创建容器-2" class="sidebar-link">创建容器</a></li><li class="sidebar-sub-header"><a href="/article/Docker/createJdkImage.html#准备上下文环境" class="sidebar-link">准备上下文环境</a></li><li class="sidebar-sub-header"><a href="/article/Docker/createJdkImage.html#下载redis压缩包" class="sidebar-link">下载Redis压缩包</a></li><li class="sidebar-sub-header"><a href="/article/Docker/createJdkImage.html#解压" class="sidebar-link">解压</a></li><li class="sidebar-sub-header"><a href="/article/Docker/createJdkImage.html#准备编译环境" class="sidebar-link">准备编译环境</a></li><li class="sidebar-sub-header"><a href="/article/Docker/createJdkImage.html#进入解压好的目录进行编译" class="sidebar-link">进入解压好的目录进行编译</a></li><li class="sidebar-sub-header"><a href="/article/Docker/createJdkImage.html#修改配置文件" class="sidebar-link">修改配置文件</a></li><li class="sidebar-sub-header"><a href="/article/Docker/createJdkImage.html#dockerfile" class="sidebar-link">DockerFile</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>基于VuePress构建静态博客</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="构建jdk8基础镜像"><a href="#构建jdk8基础镜像" aria-hidden="true" class="header-anchor">#</a> 构建JDK8基础镜像</h1> <h2 id="下载centos-7-6-1810-基础镜像"><a href="#下载centos-7-6-1810-基础镜像" aria-hidden="true" class="header-anchor">#</a> 下载centos:7.6.1810 基础镜像</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>docker pull centos:7.6.1810
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="创建文件夹jdk"><a href="#创建文件夹jdk" aria-hidden="true" class="header-anchor">#</a> 创建文件夹jdk</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>mkdir /jdk
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="上传jdk到-jdk并解压"><a href="#上传jdk到-jdk并解压" aria-hidden="true" class="header-anchor">#</a> 上传JDK到/jdk并解压</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>tar -xvf jdk-8u65-linux-x64.tar.gz 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="删除jdk中多余文件"><a href="#删除jdk中多余文件" aria-hidden="true" class="header-anchor">#</a> 删除JDK中多余文件</h2> <p><strong>创建rm.sh</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>#!/bin/bash
+rm -rf /jdk/jdk1.8.0_65/*src.zip &amp;
+rm -rf /jdk/jdk1.8.0_65/lib/missioncontrol &amp;
+rm -rf /jdk/jdk1.8.0_65/lib/visualvm &amp;
+rm -rf /jdk/jdk1.8.0_65lib/*javafx* &amp;
+rm -rf /jdk/jdk1.8.0_65jre/lib/plugin.jar &amp;
+rm -rf /jdk/jdk1.8.0_65jre/lib/ext/jfxrt.jar &amp;
+rm -rf /jdk/jdk1.8.0_65jre/bin/javaws &amp;
+rm -rf /jdk/jdk1.8.0_65jre/lib/javaws.jar &amp;
+rm -rf /jdk/jdk1.8.0_65jre/lib/desktop &amp;
+rm -rf /jdk/jdk1.8.0_65jre/plugin &amp;
+rm -rf /jdk/jdk1.8.0_65jre/lib/deploy* &amp;
+rm -rf /jdk/jdk1.8.0_65jre/lib/*javafx* &amp;
+rm -rf /jdk/jdk1.8.0_65jre/lib/*jfx* &amp;
+rm -rf /jdk/jdk1.8.0_65jre/lib/amd64/libdecora_sse.so &amp;
+rm -rf /jdk/jdk1.8.0_65jre/lib/amd64/libprism_*.so &amp;
+rm -rf /jdk/jdk1.8.0_65jre/lib/amd64/libfxplugins.so &amp;
+rm -rf /jdk/jdk1.8.0_65jre/lib/amd64/libglass.so &amp;
+rm -rf /jdk/jdk1.8.0_65jre/lib/amd64/libgstreamer-lite.so &amp;
+rm -rf /jdk/jdk1.8.0_65jre/lib/amd64/libjavafx*.so &amp;
+rm -rf /jdk/jdk1.8.0_65jre/lib/amd64/libjfx*.so
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><p><strong>修改执行权限</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>chmod +x ./rm.sh
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>创建DockerFile</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>#插入以下内容
+#使用的基础镜像
+FROM centos:7.6.1810
+#作者信息
+MAINTAINER yuu &quot;yjg_678@163.com&quot;
+
+#创建目录
+RUN mkdir -p /java/jdk1.8.0_65
+#把当前目录下的jdk文件夹添加到镜像
+ADD jdk1.8.0_65 /java/jdk1.8.0_65
+
+#添加环境变量
+ENV JAVA_HOME /java/jdk1.8.0_65
+ENV JAVA_BIN=/usr/local/src/java/jdk1.8.0_65/bin
+ENV PATH=$JAVA_HOME/bin:$PATH
+ENV CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+ENV export JAVA_HOME JAVA_BIN PATH CLASSPATH
+
+#暴露8080端口
+EXPOSE 8080
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h2 id="创建镜像"><a href="#创建镜像" aria-hidden="true" class="header-anchor">#</a> 创建镜像</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>docker build -t jdk8:1.0 ./
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><blockquote><p>-t 指定镜像的名称和tag</p></blockquote> <h2 id="创建容器"><a href="#创建容器" aria-hidden="true" class="header-anchor">#</a> 创建容器</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>docker run -it --name jdk8 jdk8:1.0
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h1 id="构建eureka镜像"><a href="#构建eureka镜像" aria-hidden="true" class="header-anchor">#</a> 构建eureka镜像</h1> <h2 id="创建eureak文件夹"><a href="#创建eureak文件夹" aria-hidden="true" class="header-anchor">#</a> 创建eureak文件夹</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>mkdir /eureka
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="创建dockerfile"><a href="#创建dockerfile" aria-hidden="true" class="header-anchor">#</a> 创建Dockerfile</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>#指定基础镜像，在其上进行定制
+FROM jdk8:1.0
+#维护者信息
+MAINTAINER yuu &lt;yjg_678@163.com&gt;
+#这里的 /tmp 目录就会在运行时自动挂载为匿名卷，任何向 /tmp 中写入的信息都不会记录进容器存储层
+VOLUME /tmp
+#复制上下文目录下的target/demo-1.0.0.jar 到容器里
+COPY wt-eureka-server-0.0.1-SNAPSHOT.jar wt-eureka-server-0.0.1-SNAPSHOT.jar
+#bash方式执行，使demo-1.0.0.jar可访问
+#RUN新建立一层，在其上执行这些命令，执行结束后， commit 这一层的修改，构成新的镜像。
+RUN bash -c &quot;touch /wt-eureka-server-0.0.1-SNAPSHOT.jar&quot;
+#声明运行时容器提供服务端口，这只是一个声明，在运行时并不会因为这个声明应用就会开启这个端口的服务
+EXPOSE 8080
+#指定容器启动程序及参数   &lt;ENTRYPOINT&gt; &quot;&lt;CMD&gt;&quot;
+ENTRYPOINT [&quot;java&quot;,&quot;-jar&quot;,&quot;wt-eureka-server-0.0.1-SNAPSHOT.jar&quot;]
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h2 id="创建镜像-2"><a href="#创建镜像-2" aria-hidden="true" class="header-anchor">#</a> 创建镜像</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>docker build -t eureka:1.0 ./
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="创建容器-2"><a href="#创建容器-2" aria-hidden="true" class="header-anchor">#</a> 创建容器</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>docker run -d -p 8888:8080 --name eureka-server  eureka:1.0
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h1 id="构建redis镜像"><a href="#构建redis镜像" aria-hidden="true" class="header-anchor">#</a> 构建redis镜像</h1> <h2 id="准备上下文环境"><a href="#准备上下文环境" aria-hidden="true" class="header-anchor">#</a> 准备上下文环境</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>mkdir redis
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="下载redis压缩包"><a href="#下载redis压缩包" aria-hidden="true" class="header-anchor">#</a> 下载Redis压缩包</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>wget http://download.redis.io/releases/redis-5.0.5.tar.gz
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="解压"><a href="#解压" aria-hidden="true" class="header-anchor">#</a> 解压</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>tar -xzvf redis-5.0.5.tar.gz
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="准备编译环境"><a href="#准备编译环境" aria-hidden="true" class="header-anchor">#</a> 准备编译环境</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>yum -y install gcc
+yum -y install gcc-c++
+gcc --version
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="进入解压好的目录进行编译"><a href="#进入解压好的目录进行编译" aria-hidden="true" class="header-anchor">#</a> 进入解压好的目录进行编译</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>cd redis/redis-5.0.5
+make
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="修改配置文件"><a href="#修改配置文件" aria-hidden="true" class="header-anchor">#</a> 修改配置文件</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>bind 0.0.0.0                              #修改bindip 使其他用户可访问
+daemonize no                              #关闭守护进程(重点)
+requirepass 123456                        #添加密码
+logfile &quot;/var/log/redis/redis-server.log&quot; #设置日志路径
+cluster-enabled yes                       #配置集群相关信息
+cluster-config-file nodes-6379.conf
+cluster-node-timeout 15000
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="dockerfile"><a href="#dockerfile" aria-hidden="true" class="header-anchor">#</a> DockerFile</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>FROM centos:7.6.1810
+
+ADD redis-5.0.5.tar.gz /
+RUN mkdir -p /redis
+ADD redis.conf /redis/
+RUN rpm --rebuilddb &amp;&amp; yum -y install gcc make
+
+WORKDIR /redis-5.0.5
+RUN make
+RUN mv /redis-5.0.5/src/redis-server /redis/
+
+WORKDIR /
+RUN rm -rf /redis-5.0.5
+
+VOLUME [&quot;/var/log/redis/&quot;]
+
+EXPOSE 6379
+CMD[&quot;/redis/redis-server&quot;,&quot;/redis/redis.conf&quot;]
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新: </span> <span class="time">9/6/2019, 5:20:56 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/article/Docker/" class="prev router-link-active">
+          概要
+        </a></span> <span class="next"><a href="/article/site/projectInit.html">
+          初始化VuePress项目
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.3045a64f.js" defer></script><script src="/assets/js/2.82912f8f.js" defer></script><script src="/assets/js/10.12481805.js" defer></script>
+  </body>
+</html>
